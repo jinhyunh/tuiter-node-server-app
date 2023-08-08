@@ -8,12 +8,11 @@ import AuthController from "./users/auth-controller.js";
 import session from "express-session";
 
 const app = express();
-app.use(
-    cors({
-        credentials: true,
-        origin: process.env.FRONTEND_URL,
-    })
-);
+app.use(cors({
+  credentials: true,
+  origin: "https://a5--incredible-souffle-b04394.netlify.app/",
+}
+));
 const sessionOptions = {
     secret: "any string",
     resave: false,
